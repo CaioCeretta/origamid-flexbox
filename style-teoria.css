@@ -1,0 +1,128 @@
+body {
+	font-family: monospace;
+	color: #333;
+}
+
+.container {
+    max-width: 400px;
+    height: 300px;
+	margin: 0 auto;
+	border: 1px solid #ccc;
+}
+
+.item {
+    margin: 5px;
+    padding: 0 10px;
+	background: tomato;
+	text-align: center;
+    font-size: 1.5em;
+}
+
+.flex {
+    display: flex;
+}
+
+.title {
+    text-align: center;
+}
+
+.flex-item-1 {
+    flex: 1;   
+}
+
+.row {
+    flex-direction: row;
+}
+
+.row-reverse {
+    flex-direction: row-reverse;
+}
+
+.column {
+    min-height: 200px;
+    flex-direction: column;
+}
+
+.column-reverse {
+    flex-direction: column-reverse;
+}
+
+.nowrap {
+    flex-wrap: nowrap;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.wrap-reverse {
+    flex-wrap: wrap-reverse;
+}
+
+.jc-start {
+    justify-content: flex-start;
+}
+
+.jc-center {
+    justify-content: center;
+}
+
+.jc-end {
+    justify-content: flex-end;
+}
+
+.spc-btwn {
+    justify-content: space-between;
+}
+
+.spc-arnd {
+    justify-content: space-around;
+}
+
+.spc-even {
+    justify-content: space-around;
+}
+
+.stretch {
+    align-items: stretch;
+}
+
+.ai-start {
+    align-items: flex-start;
+}
+
+.ai-end {
+    align-items: flex-end;
+}
+
+.ai-center {
+    align-items: center;
+}
+
+.baseline {
+    align-items: baseline;
+}
+
+.ac-stretch {
+    align-content: stretch;
+}
+
+.ac-start {
+    align-content: flex-start;
+}
+
+.ac-center {
+    align-content: center;
+}
+
+.ac-end {
+    align-content: flex-end;
+}
+
+.ac-between {
+    align-content: space-between;
+}
+
+.ac-around {
+    align-content: space-around;
+}
