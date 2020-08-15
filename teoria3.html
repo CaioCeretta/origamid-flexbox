@@ -1,0 +1,161 @@
+<link rel="stylesheet" href="./style-teoria3.css">
+
+<h1>Aula 11: Flex</h1>
+
+<!-- Basicamente um atalho para as propriedades flex-grow, flex-shrink e flex-basis. O padrão é flex: 0 1 auto. 0 de grow, 1 de shring e auto de basis. O flex 1 faz com que seja grow: 1; shring: 1; basis: 0.
+O aconselhável e usar essas 3 juntas
+-->
+
+<h3>Flex: 1 1 auto</h3>
+<section class="container">
+	<div class="item basis-auto">Palavra 1</div>
+	<div class="item basis-auto">2</div>
+	<div class="item basis-auto-grow-2">3</div>
+	<div class="item basis-auto-width">4</div>
+	<div class="item basis-auto-grow-0">5</div>
+</section>
+
+<h3>Flex 1</h3>
+<section class="container">
+	<div class="item basis-0">Test de Cont</div>
+	<div class="item basis-0">2</div>
+	<div class="item basis-0-grow-2">Palavra</div>
+	<div class="item basis-0-width">4</div>
+	<div class="item basis-0-grow-0">5</div>
+</section>
+
+<h3>flex: n 1 auto;</h3>
+<section class="container">
+	<div class="item basis-auto">Palavra 1</div>
+	<div class="item basis-auto">2</div>
+	<div class="item basis-auto-grow-2">3</div>
+	<div class="item basis-auto-width">4</div>
+	<div class="item basis-auto-grow-0">5</div>
+</section>
+
+<h3>flex: 1;</h3>
+<section class="container">
+	<div class="item basis-0">Test de Cont</div>
+	<div class="item basis-0">2</div>
+	<div class="item basis-0-grow-2">Palavra</div>
+	<div class="item basis-0-width">4</div>
+	<div class="item basis-0-grow-0">5</div>
+</section>
+
+<h3>flex: flex: 0 1 n;</h3>
+<section class="container basis-numero-container">
+	<div class="item basis-110">1</div>
+	<div class="item basis-110">12</div>
+	<div class="item basis-110">12345678910</div>
+	<div class="item basis-300">1234</div>
+	<div class="item basis-110-porcento">1</div>
+	<div class="item basis-110-porcento">12</div>
+	<div class="item basis-110-porcento">123</div>
+	<div class="item basis-110-porcento">1234</div>
+</section>
+
+<h3>flex: 0 1 n; // Diferente Conteúdo</h3>
+<section class="container basis-numero-container">
+	<div class="item basis-110">Conteúdo Grande</div>
+	<div class="item basis-110">PalavraMaior</div>
+	<div class="item basis-110">Oi</div>
+</section>
+
+<h3>flex: 1 1 n; //</h3>
+<section class="container basis-numero-container">
+	<div class="item basis-110-grow-1">1</div>
+	<div class="item basis-110-grow-1">12</div>
+	<div class="item basis-110-grow-1">1234</div>
+	<div class="item basis-110-grow-1">12345</div>
+	<div class="item basis-600-grow-1">5</div>
+</section>
+
+<h1>Aula 12: Order</h1>
+
+<!-- Por padrão, que é 0, seguirá a ordem estabelecida no html, ela faz com que elemento com maior order esteja em ultimo e o menor em primeiro -->
+
+<h3>order: misturados;</h3>
+<section class="container">
+	<div class="item order2">1</div>
+	<div class="item order4">2</div>
+	<div class="item order1">3</div>
+	<div class="item order3">4</div>
+</section>
+
+<h3>order: negativo; / flex-grow</h3>
+<section class="container">
+	<div class="item order2 flex-grow">1</div>
+	<div class="item order-1 flex-grow">2</div>
+	<div class="item order1 flex-grow">3</div>
+	<div class="item order3 flex-grow">4</div>
+</section>
+
+<h3>order: valores iguais; / grow / column</h3>
+<section class="container column">
+	<div class="item order2 flex-grow">1</div>
+	<div class="item order2 flex-grow">2</div>
+	<div class="item order1 flex-grow">3</div>
+	<div class="item order1 flex-grow">4</div>
+</section>
+
+<h3>order: valores iguais; / grow / column</h3>
+<section class="container column">
+	<div class="item flex-grow">1</div>
+	<div class="item order2 flex-grow">2</div>
+	<div class="item flex-grow">3</div>
+	<div class="item order-1 flex-grow">4</div>
+</section>
+
+<hr>
+<br>
+
+<h1>Aula 13: Align-Self</h1>
+
+<!-- Ele serve para definirmos o alinhamento específico de um flex especifico -->
+<h3>align-self: multiplos;</h3>
+<section class="container">
+	<div class="item flex-end">1</div>
+	<div class="item flex-start">Teste 2 do Item</div>
+	<div class="item">Teste 3 do Item Agora Mesmo Esse Mesmo.</div>
+	<div class="item center">Teste 4</div>
+</section>
+
+<h3>align-self: multiplos;</h3>
+<section class="container">
+	<div class="item baseline">1</div>
+	<div class="item baseline">Teste 2 do Item</div>
+	<div class="item">Teste 3 do Item Agora Mesmo Esse Mesmo.</div>
+	<div class="item center">Teste 4</div>
+</section>
+
+<h3>align-self: stretch; // align-items: flex-end;</h3>
+<section class="container align-items">
+	<div class="item">1</div>
+	<div class="item stretch">Teste 2 do Item</div>
+	<div class="item">Teste 3 do Item Agora Mesmo Esse Mesmo.</div>
+	<div class="item">Teste 4</div>
+</section>
+
+<h3>align-self: multiplos;</h3>
+<section class="container column">
+	<div class="item flex-end">1</div>
+	<div class="item flex-start">Teste 2 do Item</div>
+	<div class="item">Teste 3 do Item Agora Mesmo Esse Mesmo.</div>
+	<div class="item center">Teste 4</div>
+</section>
+
+<h3>align-self: multiplos;</h3>
+<section class="container column">
+	<div class="item baseline">1</div>
+	<div class="item baseline">Teste 2 do Item</div>
+	<div class="item">Teste 3 do Item Agora Mesmo Esse Mesmo.</div>
+	<div class="item center">Teste 4</div>
+</section>
+
+<h3>align-self: stretch; // align-items: flex-end;</h3>
+<section class="container column align-items">
+	<div class="item">1</div>
+	<div class="item stretch">Teste 2 do Item</div>
+	<div class="item">Teste 3 do Item Agora Mesmo Esse Mesmo.</div>
+	<div class="item">Teste 4</div>
+</section>
